@@ -12,14 +12,20 @@
             background-color: #f4f4f9;
             color: #333;
         }
-        header {
+        nav {
             background-color: #1a1a1a;
-            color: white;
-            padding: 40px;
+            padding: 15px;
             text-align: center;
-            font-size: 2em;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
             font-weight: bold;
-            letter-spacing: 1.5px;
+        }
+        nav a:hover {
+            text-decoration: underline;
         }
         section {
             padding: 60px 20px;
@@ -28,59 +34,41 @@
         }
         h2 {
             color: #222;
-            font-size: 1.8em;
-            border-bottom: 2px solid #e63946;
+            font-size: 2em;
+            border-bottom: 3px solid #e63946;
             display: inline-block;
             padding-bottom: 10px;
         }
-        .about, .projects {
-            margin: 40px 0;
-        }
-        .section-content {
+        /* About Me Section */
+        .about-content {
             display: flex;
             align-items: center;
             flex-wrap: wrap;
         }
-        .section-content img {
+        .about-content img {
             width: 150px;
             height: auto;
+            margin-right: 30px;
+            border: 3px solid #e63946;
             border-radius: 50%;
-            margin-right: 40px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .about img {
-            border-radius: 0;
-            border: 2px solid #e63946;
-        }
-        .about p {
+        .about-content p {
             max-width: 800px;
             line-height: 1.8;
-            font-size: 1.1em;
+            font-size: 1.2em;
         }
-        .project-list {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 20px;
+        /* Projects Section */
+        .project-content {
+            line-height: 1.8;
+            font-size: 1.2em;
         }
-        .project-list div {
-            text-align: center;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 300px;
-            transition: transform 0.3s ease-in-out;
-        }
-        .project-list div:hover {
-            transform: translateY(-10px);
-        }
-        .project-list img {
+        .project-content img {
             width: 100%;
-            height: 180px;
-            object-fit: cover;
+            height: auto;
+            margin-top: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
-            margin-bottom: 10px;
         }
         footer {
             text-align: center;
@@ -92,44 +80,50 @@
     </style>
 </head>
 <body>
-    <header>
-        Welcome to Mohammad's Portfolio
-    </header>
 
-    <section class="about">
+    <!-- Navigation -->
+    <nav>
+        <a href="#about-me">About Me</a>
+        <a href="#my-projects">My Projects</a>
+    </nav>
+
+    <!-- About Me Section -->
+    <section id="about-me">
         <h2>About Me</h2>
-        <div class="section-content">
+        <div class="about-content">
             <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Flag_of_Lebanon.svg" alt="Lebanon Flag">
             <p>
                 Hello, I am Mrpoploly! My name is Mohammad, and I was born and raised in Lebanon. 
-                As a passionate game developer, I thrive on creating immersive and enjoyable gaming experiences. 
-                I have a deep love for crafting interactive worlds that challenge players while also providing a fun and engaging atmosphere. 
-                My journey in game development has been fueled by creativity, dedication, and a commitment to delivering high-quality work. 
-                Explore my projects below to see some of the exciting things I’ve been working on!
+                I am a passionate game developer who enjoys creating engaging and immersive games. 
+                I thrive on designing fun gaming experiences, pushing the boundaries of creativity and technology. 
+                My journey in game development has been driven by dedication, innovation, and a strong commitment to delivering quality. 
+                I hope to leave a lasting impact in the gaming world by creating interactive experiences that people love.
             </p>
         </div>
     </section>
 
-    <section class="projects">
-        <h2>My Projects</h2>
-        <div class="project-list">
-            <div>
-                <img src="https://via.placeholder.com/300x180?text=Project+1" alt="Project 1">
-                <p>Project 1: Awesome Game</p>
-            </div>
-            <div>
-                <img src="https://via.placeholder.com/300x180?text=Project+2" alt="Project 2">
-                <p>Project 2: Amazing App</p>
-            </div>
-            <div>
-                <img src="https://via.placeholder.com/300x180?text=Project+3" alt="Project 3">
-                <p>Project 3: Cool Website</p>
-            </div>
+    <!-- My Projects Section -->
+    <section id="my-projects">
+        <h2>Flappy The Bird</h2>
+        <div class="project-content">
+            <p>
+                "Flappy The Bird" is a 2D Unity Android game inspired by the classic "Flappy Bird" game. 
+                It features simple, yet challenging gameplay where players guide a bird through obstacles. 
+                However, "Flappy The Bird" comes with exciting features that set it apart:
+            </p>
+            <ul>
+                <li>A **shop system** where players can purchase skins for the bird using in-game coins.</li>
+                <li>Theme customization options, allowing players to change the look and feel of the game environment.</li>
+                <li>Collectible **coins** that reward players as they progress through the game.</li>
+                <li>Unique and vibrant design style that keeps the gameplay fresh and visually appealing.</li>
+            </ul>
+            <img src="https://via.placeholder.com/1200x600?text=Flappy+The+Bird" alt="Flappy The Bird Game Screenshot">
         </div>
     </section>
 
     <footer>
         © 2024 Mohammad's Portfolio - All rights reserved.
     </footer>
+
 </body>
 </html>
