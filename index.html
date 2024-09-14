@@ -3,68 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Mohammad's Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        section {
-            padding: 20px;
-        }
-        h2 {
+            background-color: #f4f4f9;
             color: #333;
         }
-        .about, .projects {
-            margin: 20px 0;
+        header {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 40px;
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            letter-spacing: 1.5px;
         }
-        .about img, .projects img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 50%;
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        h2 {
+            color: #222;
+            font-size: 1.8em;
+            border-bottom: 2px solid #e63946;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        .about, .projects {
+            margin: 40px 0;
         }
         .section-content {
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
         }
         .section-content img {
-            margin-right: 20px;
+            width: 150px;
+            height: auto;
+            border-radius: 50%;
+            margin-right: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .about img {
+            border-radius: 0;
+            border: 2px solid #e63946;
+        }
+        .about p {
+            max-width: 800px;
+            line-height: 1.8;
+            font-size: 1.1em;
         }
         .project-list {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
+            gap: 20px;
         }
         .project-list div {
-            margin: 10px;
             text-align: center;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .project-list div:hover {
+            transform: translateY(-10px);
         }
         .project-list img {
-            width: 200px;
-            height: 150px;
+            width: 100%;
+            height: 180px;
             object-fit: cover;
             border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1a1a1a;
+            color: white;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to Mrpoploly's Website</h1>
+        Welcome to Mohammad's Portfolio
     </header>
 
     <section class="about">
         <h2>About Me</h2>
         <div class="section-content">
-            <img src="your-photo.jpg" alt="Mrpoploly's Photo">
-            <p>Hello! I am Mrpoploly, a passionate developer and creator. I love working on exciting projects that challenge me to learn and grow. Feel free to explore my work below!</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Flag_of_Lebanon.svg" alt="Lebanon Flag">
+            <p>
+                Hello, I am Mrpoploly! My name is Mohammad, and I was born and raised in Lebanon. 
+                As a passionate game developer, I thrive on creating immersive and enjoyable gaming experiences. 
+                I have a deep love for crafting interactive worlds that challenge players while also providing a fun and engaging atmosphere. 
+                My journey in game development has been fueled by creativity, dedication, and a commitment to delivering high-quality work. 
+                Explore my projects below to see some of the exciting things I’ve been working on!
+            </p>
         </div>
     </section>
 
@@ -72,18 +114,22 @@
         <h2>My Projects</h2>
         <div class="project-list">
             <div>
-                <img src="project1.jpg" alt="Project 1">
+                <img src="https://via.placeholder.com/300x180?text=Project+1" alt="Project 1">
                 <p>Project 1: Awesome Game</p>
             </div>
             <div>
-                <img src="project2.jpg" alt="Project 2">
+                <img src="https://via.placeholder.com/300x180?text=Project+2" alt="Project 2">
                 <p>Project 2: Amazing App</p>
             </div>
             <div>
-                <img src="project3.jpg" alt="Project 3">
+                <img src="https://via.placeholder.com/300x180?text=Project+3" alt="Project 3">
                 <p>Project 3: Cool Website</p>
             </div>
         </div>
     </section>
+
+    <footer>
+        © 2024 Mohammad's Portfolio - All rights reserved.
+    </footer>
 </body>
 </html>
