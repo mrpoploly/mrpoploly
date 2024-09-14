@@ -11,26 +11,44 @@
             padding: 0;
             background-color: #f4f4f9;
             color: #333;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: bold;
+            letter-spacing: 1.5px;
         }
         nav {
             background-color: #1a1a1a;
             padding: 15px;
             text-align: center;
         }
-        nav a {
+        nav button {
             color: white;
-            text-decoration: none;
-            margin: 0 15px;
+            background-color: #333;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
             font-size: 1.2em;
             font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
         }
-        nav a:hover {
-            text-decoration: underline;
+        nav button:hover {
+            background-color: #e63946;
         }
         section {
+            display: none;
             padding: 60px 20px;
             max-width: 1200px;
             margin: auto;
+        }
+        section.active {
+            display: block;
         }
         h2 {
             color: #222;
@@ -39,11 +57,9 @@
             display: inline-block;
             padding-bottom: 10px;
         }
-        /* About Me Section */
-        .about-content {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
+        .about-content, .project-content {
+            line-height: 1.8;
+            font-size: 1.2em;
         }
         .about-content img {
             width: 150px;
@@ -52,16 +68,6 @@
             border: 3px solid #e63946;
             border-radius: 50%;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .about-content p {
-            max-width: 800px;
-            line-height: 1.8;
-            font-size: 1.2em;
-        }
-        /* Projects Section */
-        .project-content {
-            line-height: 1.8;
-            font-size: 1.2em;
         }
         .project-content img {
             width: 100%;
@@ -81,14 +87,19 @@
 </head>
 <body>
 
+    <!-- Header -->
+    <header>
+        Mohammad's Portfolio
+    </header>
+
     <!-- Navigation -->
     <nav>
-        <a href="#about-me">About Me</a>
-        <a href="#my-projects">My Projects</a>
+        <button onclick="showSection('about')">About Me</button>
+        <button onclick="showSection('projects')">My Projects</button>
     </nav>
 
     <!-- About Me Section -->
-    <section id="about-me">
+    <section id="about" class="active">
         <h2>About Me</h2>
         <div class="about-content">
             <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Flag_of_Lebanon.svg" alt="Lebanon Flag">
@@ -103,7 +114,7 @@
     </section>
 
     <!-- My Projects Section -->
-    <section id="my-projects">
+    <section id="projects">
         <h2>Flappy The Bird</h2>
         <div class="project-content">
             <p>
@@ -117,13 +128,22 @@
                 <li>Collectible **coins** that reward players as they progress through the game.</li>
                 <li>Unique and vibrant design style that keeps the gameplay fresh and visually appealing.</li>
             </ul>
-            <img src="https://via.placeholder.com/1200x600?text=Flappy+The+Bird" alt="Flappy The Bird Game Screenshot">
+            <img src="https://via.placeholder.com/800x400" alt="Flappy The Bird">
         </div>
     </section>
 
     <footer>
         © 2024 Mohammad's Portfolio - All rights reserved.
     </footer>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
 
 </body>
 </html>
