@@ -4,46 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohammad's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Open Sans', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: #121212; /* Dark background */
+            color: #e0e0e0; /* Light text color */
             overflow-x: hidden;
         }
         header {
-            background-color: #1a1a1a;
-            color: white;
+            background-color: #1f1f1f; /* Darker header background */
+            color: #e0e0e0; /* Light text color */
             padding: 20px;
             text-align: center;
+            font-family: 'Montserrat', sans-serif;
             font-size: 2.5em;
-            font-weight: bold;
-            letter-spacing: 1.5px;
+            font-weight: 600;
+            letter-spacing: 1px;
         }
         nav {
-            background-color: #1a1a1a;
-            padding: 15px;
-            text-align: center;
+            background-color: #1f1f1f; /* Darker nav background */
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
         }
         nav button {
-            color: white;
-            background-color: #333;
+            color: #e0e0e0; /* Light text color */
+            background-color: #333333; /* Dark button background */
             border: none;
-            padding: 10px 20px;
+            padding: 12px 25px;
             margin: 0 10px;
-            font-size: 1.2em;
-            font-weight: bold;
+            font-size: 1em;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
             cursor: pointer;
-            border-radius: 5px;
+            border-radius: 25px;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
         }
         nav button:hover {
-            background-color: #e63946;
+            background-color: #4a90e2; /* Highlight color on hover */
         }
         section {
             display: none;
-            padding: 60px 20px;
+            padding: 40px 20px;
             max-width: 1200px;
             margin: auto;
         }
@@ -51,37 +57,61 @@
             display: block;
         }
         h2 {
-            color: #222;
-            font-size: 2em;
-            border-bottom: 3px solid #e63946;
-            display: inline-block;
+            color: #4a90e2; /* Highlight color for titles */
+            font-size: 2.2em;
+            border-bottom: 3px solid #50e3c2; /* Accent color */
             padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
         }
         .about-content, .project-content {
-            line-height: 1.8;
-            font-size: 1.2em;
+            line-height: 1.7;
+            font-size: 1.1em;
         }
         .about-content img {
-            width: 150px;
+            width: 120px;
             height: auto;
-            margin-right: 30px;
-            border: 3px solid #e63946;
+            margin-right: 20px;
             border-radius: 50%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        .project-content {
+            display: flex;
+            align-items: center;
+            gap: 20px; /* Space between text and image */
         }
         .project-content img {
-            width: 25%; /* Adjust the width as needed */
+            width: 35%;
             height: auto;
-            margin-top: 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+        .project-content ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 20px 0;
+        }
+        .project-content ul li {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            position: relative;
+            padding-left: 25px;
+        }
+        .project-content ul li::before {
+            content: "✔";
+            color: #50e3c2; /* Accent color */
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.2em;
         }
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #1a1a1a;
-            color: white;
+            background-color: #1f1f1f; /* Darker footer background */
+            color: #e0e0e0; /* Light text color */
             margin-top: 40px;
+            font-size: 0.9em;
         }
     </style>
 </head>
@@ -104,11 +134,10 @@
         <div class="about-content">
             <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Flag_of_Lebanon.svg" alt="Lebanon Flag">
             <p>
-                Hello, I am Mrpoploly! My name is Mohammad, and I was born and raised in Lebanon. 
-                I am a passionate game developer who enjoys creating engaging and immersive games. 
-                I thrive on designing fun gaming experiences, pushing the boundaries of creativity and technology. 
-                My journey in game development has been driven by dedication, innovation, and a strong commitment to delivering quality. 
-                I hope to leave a lasting impact in the gaming world by creating interactive experiences that people love.
+                Hello, I am <strong>Mrpoploly</strong>! My name is Mohammad, and I was born and raised in Lebanon. 
+                As a passionate game developer, I strive to create engaging and immersive experiences. 
+                I love pushing the boundaries of creativity and technology, crafting games that captivate players. 
+                My dedication drives me to deliver high-quality experiences in every project I work on.
             </p>
         </div>
     </section>
@@ -118,15 +147,14 @@
         <h2>Flappy The Bird</h2>
         <div class="project-content">
             <p>
-                "Flappy The Bird" is a 2D Unity Android game inspired by the classic "Flappy Bird" game. 
-                It features simple, yet challenging gameplay where players guide a bird through obstacles. 
-                However, "Flappy The Bird" comes with exciting features that set it apart:
+                "Flappy The Bird" is my 2D Unity Android game inspired by the classic "Flappy Bird." 
+                Its simple, yet challenging gameplay is enhanced with exciting features, including:
             </p>
             <ul>
-                <li>A **shop system** where players can purchase skins for the bird using in-game coins.</li>
-                <li>Theme customization options, allowing players to change the look and feel of the game environment.</li>
-                <li>Collectible **coins** that reward players as they progress through the game.</li>
-                <li>Unique and vibrant design style that keeps the gameplay fresh and visually appealing.</li>
+                <li>A shop system for buying skins using in-game coins.</li>
+                <li>Theme customization options for a personalized experience.</li>
+                <li>Collectible coins rewarding players during gameplay.</li>
+                <li>A vibrant and unique design style for an engaging visual experience.</li>
             </ul>
             <img src="images/bfg.png" alt="Flappy The Bird">
         </div>
